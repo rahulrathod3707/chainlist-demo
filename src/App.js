@@ -3,38 +3,6 @@ import { BiSearch } from "react-icons/bi";
 import { ImCoinYen } from "react-icons/im";
 import { BlockList } from "./assets/blocklist";
 
-const list = [
-  {
-    id: 1,
-    chainId: 1,
-    currency: "ETH",
-    title: "Ethereum Mainnet",
-  },
-  {
-    id: 2,
-    chainId: 2,
-    currency: "EXP",
-    title: "Expanse Network",
-  },
-  {
-    id: 3,
-    chainId: 3,
-    currency: "ROP",
-    title: "Ropsten",
-  },
-  {
-    id: 4,
-    chainId: 4,
-    currency: "GOR",
-    title: "Görli",
-  },
-  {
-    id: 5,
-    chainId: 5,
-    currency: "RIN",
-    title: "Rinkeby",
-  },
-];
 
 function App() {
   return (
