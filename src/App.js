@@ -1,6 +1,7 @@
 import "./App.css";
 import { BiSearch } from "react-icons/bi";
 import { ImCoinYen } from "react-icons/im";
+import { BlockList } from "./assets/blocklist";
 
 const list = [
   {
@@ -39,7 +40,7 @@ function App() {
   return (
     <div className="h-screen flex overflow-hidden">
       <div className="w-2/5 bg-white flex items-start justify-center px-10 flex-col">
-        <div className="text-4xl font-bold">Chainlist</div>
+        <div className="text-4xl font-bold">Blocklist</div>
         <div className="text-xl font-bold w-3/4 mt-5">
           Helping users connect to EVM powered networks
         </div>
@@ -69,20 +70,22 @@ function App() {
           </div>
         </div>
         <div className="p-7 grid grid-cols-2 gap-8 mx-10">
-          {list.map((item) => {
+          {BlockList.map((item) => {
             return (
               <div className="bg-white p-7 rounded-xl drop-shadow-2xl flex">
-                <ImCoinYen  className="mx-3 my-1 text-lg"/>
+                <ImCoinYen className="mx-3 my-1 text-lg" />
                 <div className="flex flex-col">
-                  <div className="font-semibold text-lg">{item.title}</div>
+                  <div className="font-semibold text-lg">{item.name}</div>
                   <div className="mt-2 grid grid-cols-2">
                     <div className="flex flex-col">
                       <span className="font-light">ChainID</span>
-                      <span className="font-bold">{item.id}</span>
+                      <span className="font-bold">{item.chainId}</span>
                     </div>
                     <div className="flex flex-col">
                       <span className="font-light">Currency</span>
-                      <span className="font-bold">{item.currency}</span>
+                      <span className="font-bold">
+                        {item.nativeCurrency.symbol}
+                      </span>
                     </div>
                   </div>
                   <div className="text-center mt-8">
